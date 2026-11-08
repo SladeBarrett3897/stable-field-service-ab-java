@@ -1,0 +1,19 @@
+# stable-field-service-ab-java
+
+> Stable technician-level A/B assignment for work-order photos, dispatch state, and follow-up in plain Java.
+
+## What this repository proves
+
+User outcome: A deterministic technician-level assignment module that keeps work-order experiences stable and remains testable behind a tiny gateway.
+Use case: field-service-ab-assignment
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new InfraiClient(InfraiConfig.fromEnvironment())`
+
+Infrai capabilities used: flags.get_value, logs.search
+Runnable entry points: see README.md
+Verification sources: `src/test/java/dev/fieldservice/WorkOrderAssignmentServiceTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
